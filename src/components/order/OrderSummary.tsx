@@ -1,14 +1,16 @@
 import { useState, useEffect, useRef } from 'react';
-import { ShoppingBag, Trash2, CheckCircle, ChevronUp, ChevronDown, X, Plus, Minus } from 'lucide-react';
+import { ShoppingBag, Trash2, CheckCircle, ChevronUp, X, Plus, Minus } from 'lucide-react';
 import { useOrder } from '../../state/OrderContext';
 import { usePizzas } from '../../state/PizzaContext';
 import { calculateLineDiscount } from '../../utils/discount';
 import SuccessModal from '../common/SuccessModal';
+import { useAddToCartSound } from '../../hooks/useAddToCartSound';
 import styles from './OrderSummary.module.css';
 
 const OrderSummary = () => {
     const { items, totals, removeItem, clearOrder, updateQuantity } = useOrder();
     const { state: pizzaState } = usePizzas();
+    const { playSound, playSuccessSound } = useAddToCartSound();
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isExpanded, setIsExpanded] = useState(false);
     const [lastOrderId, setLastOrderId] = useState('');
@@ -19,14 +21,15 @@ const OrderSummary = () => {
     useEffect(() => {
         if (totals.total > prevTotalRef.current && !isExpanded) {
             setIsAnimating(true);
+            playSound(); // Play sound when items are added
             const timer = setTimeout(() => setIsAnimating(false), 500);
             return () => clearTimeout(timer);
         }
         prevTotalRef.current = totals.total;
-    }, [totals.total, isExpanded]);
+    }, [totals.total, isExpanded, playSound]);
 
     const handleConfirmOrder = (e: React.MouseEvent) => {
-        e.stopPropagation(); 
+        e.stopPropagation();
         if (items.length === 0) return;
 
         const newId = Math.random().toString(36).substr(2, 9).toUpperCase();
@@ -40,6 +43,7 @@ const OrderSummary = () => {
         const orders = JSON.parse(localStorage.getItem('orders') || '[]');
         localStorage.setItem('orders', JSON.stringify([...orders, order]));
 
+        playSuccessSound(); // Play satisfying success sound
         setLastOrderId(newId);
         setIsModalOpen(true);
         setIsExpanded(false);
@@ -54,7 +58,7 @@ const OrderSummary = () => {
                 className={`${styles.summaryWrapper} ${isExpanded ? styles.expanded : ''} ${isAnimating ? styles.pulse : ''}`}
                 onClick={() => setIsExpanded(!isExpanded)}
             >
-                {}
+                { }
                 <div className={styles.collapsedBar}>
                     <div className={styles.summaryInfo}>
                         <div className={styles.cartIconWrapper}>
@@ -79,7 +83,7 @@ const OrderSummary = () => {
                     )}
                 </div>
 
-                {}
+                { }
                 <div className={styles.expandedContent} onClick={(e) => e.stopPropagation()}>
 
 
@@ -158,7 +162,7 @@ const OrderSummary = () => {
 
             {isExpanded && <div className={styles.overlay} onClick={() => setIsExpanded(false)} />}
 
-            {}
+            { }
             {showClearConfirm && (
                 <div className={styles.modalOverlay}>
                     <div className={styles.confirmModal}>

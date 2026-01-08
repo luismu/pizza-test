@@ -21,7 +21,7 @@ const Header = () => {
                         <Search className={styles.searchIcon} size={20} />
                         <input
                             type="text"
-                            placeholder="Buscar pizzas..."
+                            placeholder="Find your favorite pizza..."
                             className={styles.searchInput}
                             value={search}
                             onChange={(e) => setSearch(e.target.value)}

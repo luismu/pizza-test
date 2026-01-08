@@ -4,7 +4,7 @@ A premium, interactive Single-Page Application (SPA) for ordering pizzas. Built 
 
 ## 🧠 Key Decisions & Rationale
 
-### UI/UX
+### 🎨 UI/UX
 The UI/UX is premium and modern based on **Rappi** and **Uber Eats** design with a focus on simplicity and ease of use, animations and transitions.
 
 ### ⚛️ State Management: Context API + useReducer
