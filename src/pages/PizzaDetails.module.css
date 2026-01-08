@@ -1,0 +1,249 @@
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.backBtn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    color: var(--secondary);
+    font-weight: 500;
+    margin-bottom: 2rem;
+    transition: var(--transition);
+}
+
+.backBtn:hover {
+    color: var(--primary);
+}
+
+.detailCard {
+    background: white;
+    border-radius: var(--radius);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: var(--shadow-lg);
+}
+
+.imageSection {
+    background: linear-gradient(135deg, #f1faee 0%, #a8dadc 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+}
+
+.pizzaCircle {
+    width: 280px;
+    height: 280px;
+    background: #ffb703;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 10px solid #fb8500;
+}
+
+.infoSection {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.badgeRow {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.categoryBadge {
+    background: var(--dark);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.veggieBadge {
+    background: #d8f3dc;
+    color: #2d6a4f;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.name {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.description {
+    color: var(--secondary);
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.ingredientsBox {
+    margin-bottom: 2.5rem;
+}
+
+.ingredientsBox h3 {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #adb5bd;
+    margin-bottom: 1rem;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    background: var(--light);
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    border: 1px solid var(--border);
+}
+
+.purchaseBox {
+    margin-top: auto;
+    background: var(--light);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+}
+
+.priceCol {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+
+.label {
+    font-size: 0.8125rem;
+    color: var(--secondary);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.quantitySelector {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: var(--radius);
+    padding: 0.5rem;
+    border: 1px solid var(--border);
+}
+
+.qtyBtn {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: var(--light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.qtyBtn:hover {
+    background: var(--accent);
+    color: var(--primary);
+}
+
+.qtyValue {
+    width: 50px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+
+.addBtn {
+    flex: 1;
+    background: var(--dark);
+    color: white;
+    border-radius: var(--radius);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    transition: var(--transition);
+}
+
+.addBtn:hover {
+    background: var(--primary);
+    transform: translateY(-2px);
+}
+
+.promoNote {
+    margin-top: 1rem;
+    font-size: 0.8125rem;
+    color: #2d6a4f;
+    background: #d8f3dc;
+    padding: 0.5rem;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.notFound {
+    text-align: center;
+    padding: 5rem;
+}
+
+@media (max-width: 850px) {
+    .detailCard {
+        grid-template-columns: 1fr;
+    }
+
+    .imageSection {
+        padding: 3rem;
+    }
+
+    .infoSection {
+        padding: 2rem;
+    }
+
+    .name {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .actions {
+        flex-direction: column;
+    }
+
+    .quantitySelector {
+        justify-content: center;
+    }
+
+    .addBtn {
+        padding: 1rem;
+    }
+}

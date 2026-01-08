@@ -1,0 +1,55 @@
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 80px;
+    
+}
+
+.mainCol {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.pizzaGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.noResults {
+    text-align: center;
+    padding: 4rem;
+    background: white;
+    border-radius: var(--radius);
+    color: var(--secondary);
+}
+
+.chartsSection {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+
+.sectionTitle {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--secondary);
+}
+
+@media (max-width: 1024px) {
+    .pizzaGrid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+}

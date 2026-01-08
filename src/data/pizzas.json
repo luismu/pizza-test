@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "name": "Margherita",
+    "price": 5,
+    "ingredients": ["Tomato", "Mozzarella", "Basil"],
+    "description": "The classic Neapolitan pizza with a thin, crispy crust.",
+    "category": "Classic"
+  },
+  {
+    "id": "2",
+    "name": "Hawaiana",
+    "price": 7,
+    "ingredients": ["Tomato", "Pineapple", "Ham", "Cheese"],
+    "description": "A controversial but delicious sweet and savory combination.",
+    "category": "Exotic"
+  },
+  {
+    "id": "3",
+    "name": "Pepperoni",
+    "price": 8,
+    "ingredients": ["Tomato", "Mozzarella", "Pepperoni"],
+    "description": "A crowd-pleaser with spicy pepperoni and melted cheese.",
+    "category": "Classic"
+  },
+  {
+    "id": "4",
+    "name": "Four Cheese",
+    "price": 9,
+    "ingredients": ["Mozzarella", "Gorgonzola", "Parmesan", "Fontina"],
+    "description": "Rich and creamy for true cheese lovers.",
+    "category": "Vegetarian"
+  },
+  {
+    "id": "5",
+    "name": "Veggie",
+    "price": 6,
+    "ingredients": ["Tomato", "Bell Peppers", "Olives", "Onions", "Spinach"],
+    "description": "Fresh and full of vegetables.",
+    "category": "Vegetarian"
+  }
+]

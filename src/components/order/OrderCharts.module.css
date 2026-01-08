@@ -1,0 +1,38 @@
+.chartsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.chartCard {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+}
+
+.chartCard h3 {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: var(--secondary);
+}
+
+.chartWrapper {
+    height: 300px;
+}
+
+.noData {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary);
+    font-style: italic;
+    font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+    .chartsGrid {
+        grid-template-columns: 1fr;
+    }
+}
