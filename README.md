@@ -8,13 +8,14 @@ A premium, interactive Single-Page Application (SPA) for ordering pizzas. Built 
 The UI/UX is premium and modern based on **Rappi** and **Uber Eats** design with a focus on simplicity and ease of use, animations and transitions.
 
 **Responsive design**
-Mobile
+**Mobile**
+
 <img width="302" height="589" alt="image" src="https://github.com/user-attachments/assets/424b7996-fd99-459d-be20-6f90d7a84296" />
 
-Tablet
+**Tablet**
 <img width="756" height="799" alt="image" src="https://github.com/user-attachments/assets/053f1f99-5734-40d1-bb14-2ea8422251be" />
 
-Laptop
+**Laptop**
 <img width="845" height="800" alt="image" src="https://github.com/user-attachments/assets/69dd7cf0-79ae-4012-9a73-db5bdb80f769" />
 
 
